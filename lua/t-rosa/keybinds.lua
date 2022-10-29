@@ -1,4 +1,4 @@
-local opts = { noremap=true, silent=true }
+local opts = { noremap = true, silent = true }
 
 -- Panes navigation
 vim.keymap.set('i', '<C-h>', '<C-\\><C-N><C-w>h', opts)
@@ -19,6 +19,7 @@ vim.keymap.set('n', 'gd', "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
 vim.keymap.set('n', 'gh', "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
 vim.keymap.set('n', 'ga', "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 vim.keymap.set('n', '<leader>r', "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
+vim.keymap.set('n', '<leader>f', "<cmd>lua vim.lsp.buf.format()<cr>", opts)
 
 -- Telescope
 vim.keymap.set('n', '<leader>ff', "<cmd>Telescope find_files<cr>", opts)

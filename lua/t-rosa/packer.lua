@@ -17,14 +17,20 @@ return require('packer').startup(function(use)
 	use 'hrsh7th/cmp-vsnip'
 	use 'hrsh7th/vim-vsnip'
 
-	-- Colorscheme
-	use 'catppuccin/nvim'
+	-- Syntax highlighting
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate'
+	}
 
 	-- Finder
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+
+	-- Colorscheme
+	use 'catppuccin/nvim'
 
 	-- Status line
 	use {

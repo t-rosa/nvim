@@ -28,6 +28,9 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+	
+	-- Auto close pairs
+	use 'windwp/nvim-autopairs'
 
 	-- Colorscheme
 	use 'catppuccin/nvim'

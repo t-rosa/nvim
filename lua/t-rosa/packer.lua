@@ -23,6 +23,9 @@ return require('packer').startup(function(use)
 		run = ':TSUpdate'
 	}
 
+	-- Formatter
+	use 'jose-elias-alvarez/null-ls.nvim'
+
 	-- Files finder
 	use {
 		'nvim-telescope/telescope.nvim',

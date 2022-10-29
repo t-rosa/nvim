@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/toma/.local/share/nvim/site/pack/packer/start/nvim",
     url = "https://github.com/catppuccin/nvim"
   },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/toma/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
   ["nvim-web-devicons"] = {
     loaded = false,
     needs_bufread = false,

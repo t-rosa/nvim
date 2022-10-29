@@ -26,6 +26,15 @@ return require('packer').startup(function(use)
 	-- Formatter
 	use 'jose-elias-alvarez/null-ls.nvim'
 
+	-- Explorer
+	use {
+		'nvim-tree/nvim-tree.lua',
+		requires = {
+			'nvim-tree/nvim-web-devicons',
+		},
+		tag = 'nightly'
+	}
+
 	-- Files finder
 	use {
 		'nvim-telescope/telescope.nvim',
@@ -48,6 +57,6 @@ return require('packer').startup(function(use)
 	-- Status line
 	use {
 		'nvim-lualine/lualine.nvim',
-		requires = { {'kyazdani42/nvim-web-devicons'} }
+		requires = { {'nvim-tree/nvim-web-devicons'} }
 	}
 end)

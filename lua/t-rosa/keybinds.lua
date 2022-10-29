@@ -1,8 +1,6 @@
 local opts = { noremap=true, silent=true }
 
-vim.keymap.set('n', '<leader>e', "<cmd>Ex<CR>", opts)
-
--- Pane navigation
+-- Panes navigation
 vim.keymap.set('i', '<C-h>', '<C-\\><C-N><C-w>h', opts)
 vim.keymap.set('i', '<C-j>', '<C-\\><C-N><C-w>j', opts)
 vim.keymap.set('i', '<C-k>', '<C-\\><C-N><C-w>k', opts)
@@ -26,3 +24,7 @@ vim.keymap.set('n', '<leader>r', "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 vim.keymap.set('n', '<leader>ff', "<cmd>Telescope find_files<cr>", opts)
 vim.keymap.set('n', '<leader>fg', "<cmd>Telescope live_grep<cr>", opts)
 vim.keymap.set('n', '<leader>fb', "<cmd>Telescope buffers<cr>", opts)
+
+-- Explorer
+vim.keymap.set('n', '<leader>ee', "<cmd>NvimTreeToggle<cr>", opts)
+vim.keymap.set('n', '<leader>ec', "<cmd>NvimTreeCollapse<cr>", opts)

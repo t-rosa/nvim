@@ -1,9 +1,16 @@
 local opts = { noremap=true, silent=true }
 
 vim.keymap.set('n', '<leader>e', "<cmd>Ex<CR>", opts)
-vim.keymap.set('n', '<leader>ff', "<cmd>Telescope find_files<cr>", opts)
-vim.keymap.set('n', '<leader>fg', "<cmd>Telescope live_grep<cr>", opts)
-vim.keymap.set('n', '<leader>fb', "<cmd>Telescope buffers<cr>", opts)
+
+-- Pane navigation
+vim.keymap.set('i', '<C-h>', '<C-\\><C-N><C-w>h', opts)
+vim.keymap.set('i', '<C-j>', '<C-\\><C-N><C-w>j', opts)
+vim.keymap.set('i', '<C-k>', '<C-\\><C-N><C-w>k', opts)
+vim.keymap.set('i', '<C-l>', '<C-\\><C-N><C-w>l', opts)
+vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
+vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
+vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
+vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
 -- LSP
 vim.keymap.set('n', '<leader>do', vim.diagnostic.open_float, opts)
@@ -14,3 +21,8 @@ vim.keymap.set('n', 'gd', "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
 vim.keymap.set('n', 'gh', "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
 vim.keymap.set('n', 'ga', "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 vim.keymap.set('n', '<leader>r', "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
+
+-- Telescope
+vim.keymap.set('n', '<leader>ff', "<cmd>Telescope find_files<cr>", opts)
+vim.keymap.set('n', '<leader>fg', "<cmd>Telescope live_grep<cr>", opts)
+vim.keymap.set('n', '<leader>fb', "<cmd>Telescope buffers<cr>", opts)

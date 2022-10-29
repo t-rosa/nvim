@@ -23,11 +23,14 @@ return require('packer').startup(function(use)
 		run = ':TSUpdate'
 	}
 
-	-- Finder
+	-- Files finder
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+
+	-- Terminal toggle
+	use {'akinsho/toggleterm.nvim', tag = '*'}
 
 	-- Auto close pairs
 	use 'windwp/nvim-autopairs'

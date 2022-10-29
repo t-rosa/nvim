@@ -2,7 +2,7 @@ local toggleterm = require("toggleterm")
 
 toggleterm.setup({
 	--[[ size = 20, ]]
-	open_mapping = [[<leader>tt]],
+	open_mapping = [[gtt]],
 	hide_numbers = true,
 	shade_filetypes = {},
 	shade_terminals = true,

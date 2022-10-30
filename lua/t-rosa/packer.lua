@@ -41,6 +41,9 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
+    -- Surround
+    use 'tpope/vim-surround'
+
 	-- Terminal toggle
 	use {'akinsho/toggleterm.nvim', tag = '*'}
 

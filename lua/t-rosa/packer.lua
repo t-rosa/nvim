@@ -44,6 +44,12 @@ return require('packer').startup(function(use)
     -- Surround
     use 'tpope/vim-surround'
 
+    -- Easy jump
+    use {
+        'phaazon/hop.nvim',
+        branch = 'v2'
+    }
+
 	-- Terminal toggle
 	use {'akinsho/toggleterm.nvim', tag = '*'}
 

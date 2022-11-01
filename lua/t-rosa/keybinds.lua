@@ -29,3 +29,17 @@ vim.keymap.set('n', '<leader>fb', "<cmd>Telescope buffers<cr>", opts)
 -- Explorer
 vim.keymap.set('n', '<leader>ee', "<cmd>NvimTreeToggle<cr>", opts)
 vim.keymap.set('n', '<leader>ec', "<cmd>NvimTreeCollapse<cr>", opts)
+
+-- Hop
+vim.keymap.set('n', '<leader>hw', "<cmd>HopWord<cr>", opts)
+vim.keymap.set('n', '<leader>hc', "<cmd>HopChar1<cr>", opts)
+vim.keymap.set('n', '<leader>hcc', "<cmd>HopChar2<cr>", opts)
+
+
+-- Text move up and down
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", opts)
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", opts)
+vim.keymap.set("v", "<A-j>", ":m .+1<CR>==", opts)
+vim.keymap.set("v", "<A-k>", ":m .-2<CR>==", opts)
+vim.keymap.set("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+vim.keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)

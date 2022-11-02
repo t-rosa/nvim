@@ -43,6 +43,14 @@ require("lspconfig").cssls.setup {
 	capabilities = capabilities,
 }
 
+require("lspconfig").omnisharp.setup {
+	capabilities = capabilities,
+}
+
+require("lspconfig").jsonls.setup {
+	capabilities = capabilities,
+}
+
 require("lspconfig").prismals.setup {
 	capabilities = capabilities,
 }

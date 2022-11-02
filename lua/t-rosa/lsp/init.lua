@@ -52,7 +52,7 @@ require("lspconfig").jsonls.setup {
 }
 
 require("lspconfig").prismals.setup {
-	capabilities = capabilities,
+    capabilities = capabilities
 }
 
 require("lspconfig").sumneko_lua.setup {

@@ -1,5 +1,23 @@
-require("mason").setup()
-require("mason-lspconfig").setup()
+local mason = require("mason")
+local mason_lspconfig = require("mason-lspconfig")
+
+mason.setup({})
+mason_lspconfig.setup({
+    ensure_installed = {
+        "sumneko_lua",
+        "tsserver",
+        "eslint",
+        "tailwindcss",
+        "html",
+        "cssls",
+        "dockerls",
+        "yamlls",
+        "prismals",
+        "omnisharp",
+        "jsonls",
+        "emmet_ls"
+    }
+})
 
 local config = {
 	virtual_text = false,
@@ -67,5 +85,13 @@ require("lspconfig").sumneko_lua.setup {
 }
 
 require("lspconfig").emmet_ls.setup {
+	capabilities = capabilities,
+}
+
+require("lspconfig").dockerls.setup {
+	capabilities = capabilities,
+}
+
+require("lspconfig").yamlls.setup {
 	capabilities = capabilities,
 }

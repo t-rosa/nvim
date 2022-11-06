@@ -1,7 +1,7 @@
 local toggleterm = require("toggleterm")
 
 toggleterm.setup({
-	open_mapping = [[<C-y>]],
+    open_mapping = [[<c-y>]],
 })
 
 function _G.set_terminal_keymaps()

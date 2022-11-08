@@ -15,7 +15,8 @@ mason_lspconfig.setup({
         "prismals",
         "omnisharp",
         "jsonls",
-        "emmet_ls"
+        "emmet_ls",
+        "sqlls"
     }
 })
 
@@ -93,5 +94,8 @@ require("lspconfig").dockerls.setup {
 }
 
 require("lspconfig").yamlls.setup {
+	capabilities = capabilities,
+}
+require("lspconfig").sqlls.setup {
 	capabilities = capabilities,
 }

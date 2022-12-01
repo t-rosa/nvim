@@ -69,6 +69,6 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-tree/nvim-web-devicons'} }
 	}
 
-    -- UI
-    use 'stevearc/dressing.nvim'
+  -- UI
+  use 'stevearc/dressing.nvim'
 end)

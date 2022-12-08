@@ -10,6 +10,12 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
+-- Vertical navigation
+vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
+vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
+vim.keymap.set('v', '<C-d>', '<C-d>zz', opts)
+vim.keymap.set('v', '<C-u>', '<C-u>zz', opts)
+
 -- LSP
 vim.keymap.set('n', '<leader>do', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
 vim.keymap.set('n', '<leader>dp', '<cmd>lua vim.diagnostic.goto_prev()<cr>', opts)
@@ -27,13 +33,12 @@ vim.keymap.set('n', '<leader>fg', "<cmd>Telescope live_grep<cr>", opts)
 vim.keymap.set('n', '<leader>fb', "<cmd>Telescope buffers<cr>", opts)
 
 -- Explorer
-vim.keymap.set('n', '<leader>e', "<cmd>NvimTreeToggle<cr>", opts)
+vim.keymap.set('n', '<leader>e', "<cmd>NeoTreeFloatToggle<cr>", opts)
 vim.keymap.set('n', '<leader>c', "<cmd>NvimTreeCollapse<cr>", opts)
 
 -- Hop
 vim.keymap.set('n', '<leader>hw', "<cmd>HopWord<cr>", opts)
 vim.keymap.set('n', '<leader>hc', "<cmd>HopChar1<cr>", opts)
-
 
 -- Text move up and down
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", opts)

@@ -38,11 +38,13 @@ return require('packer').startup(function(use)
 
   -- Explorer
   use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons',
-    },
-    tag = 'nightly'
+  "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = { 
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
   }
 
   -- Files finder
@@ -50,6 +52,7 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   -- Surround
   use 'tpope/vim-surround'
@@ -72,13 +75,4 @@ return require('packer').startup(function(use)
 
   -- Colorscheme
   use 'catppuccin/nvim'
-
-  -- Status line
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { { 'nvim-tree/nvim-web-devicons' } }
-  }
-
-  -- UI
-  use 'stevearc/dressing.nvim'
 end)

@@ -2,6 +2,9 @@ return require("packer").startup(function(use)
   -- Package manager
   use("wbthomason/packer.nvim")
 
+  -- Perf
+  use 'lewis6991/impatient.nvim'
+
   -- LSP
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -33,7 +36,6 @@ return require("packer").startup(function(use)
 
   -- Formatter
   use("jose-elias-alvarez/null-ls.nvim")
-  use({ "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*" })
 
   -- Explorer
   use({

@@ -19,4 +19,7 @@ treesitter.setup({
     "yaml",
     "toml",
   },
+  highlight = {
+    enable = true,
+  },
 })

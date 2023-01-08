@@ -14,6 +14,7 @@ neo_tree.setup({
   filesystem = {
     filtered_items = {
       hide_dotfiles = false,
+      hide_gitignored = false,
       always_show = {
         ".gitignore",
       },
@@ -23,7 +24,7 @@ neo_tree.setup({
       },
     },
     hijack_netrw_behavior = "open_current",
-   follow_current_file = true,
+    follow_current_file = true,
     use_libuv_file_watcher = true,
   },
 })

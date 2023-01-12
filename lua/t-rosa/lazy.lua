@@ -48,7 +48,6 @@ require("lazy").setup({
   {
     "jose-elias-alvarez/null-ls.nvim",
     config = require("t-rosa.plugin.null-ls").config,
-    keys = "<leader>p"
   },
 
   -- Explorer

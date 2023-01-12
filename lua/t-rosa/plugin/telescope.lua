@@ -1,5 +1,16 @@
 return {
-  config = function ()
+  keys = {
+    {
+      '<leader>ff', "<cmd>Telescope find_files<cr>"
+    },
+    {
+      '<leader>fg', "<cmd>Telescope live_grep<cr>"
+    },
+    {
+      '<leader>fb', "<cmd>Telescope buffers<cr>"
+    }
+  },
+  config = function()
     local telescope = require("telescope");
     local actions = require("telescope.actions");
 

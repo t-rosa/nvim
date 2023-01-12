@@ -1,5 +1,10 @@
 return {
-  config = function ()
+  keys = {
+    {
+      "gc"
+    }
+  },
+  config = function()
     local comment = require("Comment")
     local comment_utils = require("Comment.utils")
     local commentstring_utils = require("ts_context_commentstring.utils")

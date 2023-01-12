@@ -39,8 +39,8 @@ require("lazy").setup({
   -- Syntax highlight
   {
     "nvim-treesitter/nvim-treesitter",
-    config = require("t-rosa.plugin.treesitter").config,
     event = "BufReadPre",
+    config = require("t-rosa.plugin.treesitter").config,
     build = ":TSUpdate",
   },
 
@@ -48,12 +48,14 @@ require("lazy").setup({
   {
     "jose-elias-alvarez/null-ls.nvim",
     config = require("t-rosa.plugin.null-ls").config,
+    keys = require("t-rosa.plugin.null-ls").keys
   },
 
   -- Explorer
   {
     "nvim-neo-tree/neo-tree.nvim",
     config = require("t-rosa.plugin.neo-tree").config,
+    keys = require("t-rosa.plugin.neo-tree").keys,
     branch = "v2.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -66,6 +68,7 @@ require("lazy").setup({
   {
     "nvim-telescope/telescope.nvim",
     config = require("t-rosa.plugin.telescope").config,
+    keys = require("t-rosa.plugin.telescope").keys,
     dependencies = { { "nvim-lua/plenary.nvim" } },
   },
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
@@ -76,30 +79,34 @@ require("lazy").setup({
   -- Easy jump
   {
     "phaazon/hop.nvim",
-    config = require("t-rosa.plugin.hop").config,
     branch = "v2",
+    keys = require("t-rosa.plugin.hop").keys,
+    config = require("t-rosa.plugin.hop").config,
   },
 
   -- Terminal toggle
-  { "akinsho/toggleterm.nvim", version = "*",
+  {
+    "akinsho/toggleterm.nvim", version = "*",
     config = require("t-rosa.plugin.toggleterm").config,
+    keys = require("t-rosa.plugin.toggleterm").keys,
   },
 
   -- Auto close pairs
-  { 
+  {
     "windwp/nvim-autopairs",
     config = require("t-rosa.plugin.autopairs").config,
   },
 
   -- Comment
-  { 
+  {
     "numToStr/Comment.nvim",
     config = require("t-rosa.plugin.comment").config,
+    keys = require("t-rosa.plugin.comment").keys,
   },
-  { "JoosepAlviste/nvim-ts-context-commentstring" },
+  { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufReadPre" },
 
   -- Colorscheme
-  { 
+  {
     "catppuccin/nvim",
     config = require("t-rosa.plugin.colorscheme").config,
   },

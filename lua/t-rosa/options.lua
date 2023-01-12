@@ -15,4 +15,5 @@ vim.opt.ignorecase = true
 vim.opt.swapfile = false
 
 vim.g.mapleader = " "
+
 vim.g.updatetime = 100

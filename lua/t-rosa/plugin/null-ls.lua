@@ -1,5 +1,10 @@
 return {
-  config = function ()
+  keys = { 
+    {
+      "<leader>p", "<cmd>lua vim.lsp.buf.format()<cr>"
+    }
+  },
+  config = function()
     local null_ls = require("null-ls")
 
     local formatting = null_ls.builtins.formatting
@@ -12,5 +17,5 @@ return {
         diagnostics.eslint
       },
     })
-  end
+  end,
 }

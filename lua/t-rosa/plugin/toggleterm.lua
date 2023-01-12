@@ -1,5 +1,8 @@
 return {
-  config = function ()
+  keys = {
+    "<C-y>"
+  },
+  config = function()
     local toggleterm = require("toggleterm")
 
     toggleterm.setup({

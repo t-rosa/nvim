@@ -1,5 +1,10 @@
 return {
-  config = function ()
+  keys = {
+    {
+      '<leader>e', "<cmd>NeoTreeFloatToggle<cr>"
+    }
+  },
+  config = function()
     local neo_tree = require("neo-tree")
 
     neo_tree.setup({

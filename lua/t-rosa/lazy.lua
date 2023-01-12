@@ -69,9 +69,11 @@ require("lazy").setup({
     "nvim-telescope/telescope.nvim",
     config = require("t-rosa.plugin.telescope").config,
     keys = require("t-rosa.plugin.telescope").keys,
-    dependencies = { { "nvim-lua/plenary.nvim" } },
+    dependencies = {
+      { "nvim-lua/plenary.nvim" },
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    },
   },
-  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 
   -- Surround
   { "tpope/vim-surround" },
